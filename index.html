@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy: Currency & Local Costs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Buddy</h1>
+
+        <div class="currency-converter">
+            <h2>Currency Converter</h2>
+            <div class="input-group">
+                <input type="number" id="amount" value="1" min="0">
+                <select id="fromCurrency"></select>
+                <span>to</span>
+                <select id="toCurrency"></select>
+                <button id="convertBtn">Convert</button>
+            </div>
+            <p class="result" id="conversionResult">Enter an amount and select currencies to convert.</p>
+            <p class="api-status" id="apiStatus"></p>
+        </div>
+
+        <div class="local-costs">
+            <h2>Average Local Costs</h2>
+            <div class="location-select">
+                <label for="costLocation">Select Destination:</label>
+                <select id="costLocation"></select>
+            </div>
+            <div id="costDetails" class="cost-details">
+                <p>Select a destination to see average costs.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

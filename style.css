@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for better scroll */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.currency-converter, .local-costs {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: #fdfdfd;
+}
+
+.input-group, .location-select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="number"], select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+    flex-grow: 1; /* Allow them to grow in flexible layout */
+    min-width: 100px; /* Ensure minimum width */
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.result {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 15px;
+    min-height: 30px; /* Prevent layout shift */
+}
+
+.api-status {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+.cost-details {
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.6;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cost-details p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.cost-details strong {
+    color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+    .input-group, .location-select {
+        flex-direction: column;
+    }
+    input[type="number"], select, button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        margin-bottom: 0; /* Last button doesn't need margin */
+    }
+}
